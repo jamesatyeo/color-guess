@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
+
+html, body, h1, h2 {
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: #2C8E99;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h1, h2 {
+    padding: 5px;
+}
+
+nav {
+    color: #2C8E99;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+#nav-container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 650px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    flex: 0 0 auto;
+    
+}
+
+.difficulty {
+    display: flex;
+}
+
+.difficulty div {
+    padding: 10px 5px;
+    transition-property: none;
+}
+
+.difficulty div:hover, #new {
+    cursor: pointer;
+}
+
+.difficulty .selected {
+    background-color: #2C8E99;
+    color: white;
+}
+
+#correct {
+    color: white;
+}
+
+#main-container {
+    margin: 20px auto 0 auto;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 20px;
+    width: max-content;
+    grid-auto-flow: dense;
+}
+
+.color-patch {
+    background-color: pink;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.color-patch:nth-of-type(4) {
+    grid-column-start: 2;
+}
+
+@media (min-width: 900px) {
+
+    #main-container {
+        grid-template-columns: repeat(3, 250px);
+        grid-template-rows: repeat(2, 250px);
+    }
+
+    h1 {
+        font-size: 8rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    #nav-container {
+        font-size: 2rem;
+        padding: 0;
+        max-width: 800px;
+    }
+}
